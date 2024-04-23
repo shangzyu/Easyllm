@@ -3,6 +3,7 @@
 
 ## 大模型综述
 [通向AGI之路：大型语言模型（LLM）技术精要](https://zhuanlan.zhihu.com/p/597586623) 最好的综述，解释了LLM中attention和FFN参数蕴含知识的区别  
+[[PPT]浅析大语言模型从预训练到微调的技术原理](https://zhuanlan.zhihu.com/p/647843722)
 [人工智能对齐是什么、以及我为什么选择研究它？](https://zhuanlan.zhihu.com/p/655464730)
 
 
@@ -10,7 +11,8 @@
 ## LLM 组成原理
 ### Tokenizer 相关
 [大模型基础知识系列：从头训练一个自己的Tokenizer](https://zhuanlan.zhihu.com/p/625715830)
-[没有思考过 Embedding，不足以谈 AI](https://zhuanlan.zhihu.com/p/643560252)
+[没有思考过 Embedding，不足以谈 AI](https://zhuanlan.zhihu.com/p/643560252)  
+[BPE 算法原理及使用指南【深入浅出】](https://zhuanlan.zhihu.com/p/448147465)
 
 ### Attention 相关
 Multi Head Attention(MHA)->Multi Query Attention(MQA)->Group Query Attention(GQA)  
@@ -51,8 +53,6 @@ Layer Norm&RMS Norm
 
 
 ## LLM 结构
-### 组成部分
-[为什么现在的LLM都是Decoder-only的架构？](https://spaces.ac.cn/archives/9529/comment-page-1) 区分了encoder和decoder，encoder只是具有双向注意力的decoder
 ### 常见模型
 Qwen1.5  
 Mixtral  
@@ -74,12 +74,12 @@ GLM
 
 
 ## 模型训练
+[LLaMA-Factory源码解读](https://www.cnblogs.com/lm970585581/p/18140564)  
 ### Pretrain
 ### SFT
 ### RLHF  
 [强化学习小记——观其大略](https://zhuanlan.zhihu.com/p/646787054)  
-[ChatGPT 背后的“功臣”——RLHF 技术详解
-](https://mp.weixin.qq.com/s/TLQ3TdrB5gLb697AFmjEYQ)
+[ChatGPT 背后的“功臣”——RLHF 技术详解](https://mp.weixin.qq.com/s/TLQ3TdrB5gLb697AFmjEYQ)  
 PPO  
 [【RLHF】怎样让 PPO 训练更稳定？早期人类征服 RLHF 的驯化经验](https://zhuanlan.zhihu.com/p/666455333)  
 DPO  
@@ -123,17 +123,19 @@ Prefix Tuning
 
 
 ## 模型推理
+综述  
 [大模型推理框架概述](https://juejin.cn/post/7286676030965317668)  
-
+[LLM（十八）：LLM 的推理优化技术纵览](https://zhuanlan.zhihu.com/p/642412124)  
 生成和采样  
 [LLM大语言模型之Generate/Inference（生成/推理）中参数与解码策略原理及其代码实现](https://zhuanlan.zhihu.com/p/653926703)  
 [LLM（大语言模型）解码时是怎么生成文本的？](https://www.likecs.com/show-308663700.html)  
 [【NLP学习】自然语言生成中的top-k, top-p, typical采样方法的实现](https://zhuanlan.zhihu.com/p/560847355)  
 [如何通俗的理解beam search？](https://zhuanlan.zhihu.com/p/82829880)    
 vLLM  
-[LLM推理2：vLLM源码学习](https://zhuanlan.zhihu.com/p/643336063)  
+[LLM 高速推理框架 vLLM 源代码分析 / vLLM Source Code Analysis](https://zhuanlan.zhihu.com/p/641999400)  
 [LLM推理4：vllm和HF推理结果不一致](https://zhuanlan.zhihu.com/p/658780653)  
-[LLM（十七）：从 FlashAttention 到 PagedAttention, 如何进一步优化 Attention 性能](https://zhuanlan.zhihu.com/p/638468472)
+[LLM（十七）：从 FlashAttention 到 PagedAttention, 如何进一步优化 Attention 性能](https://zhuanlan.zhihu.com/p/638468472)  
+[FlashAttention:加速计算,节省显存, IO感知的精确注意力](https://zhuanlan.zhihu.com/p/639228219)
 
 
 
@@ -142,7 +144,7 @@ vLLM
 ## 模型量化
 [大模型量化概述](https://blog.csdn.net/scgaliguodong123_/article/details/136176355)  
 AWQ  
-[AWQ：用于 LLM 压缩和加速的激活感知权重量化](https://zhuanlan.zhihu.com/p/669061765)
+[AWQ：用于 LLM 压缩和加速的激活感知权重量化](https://zhuanlan.zhihu.com/p/669061765)  
 GPTQ
 
 
