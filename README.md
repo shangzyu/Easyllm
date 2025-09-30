@@ -3,7 +3,7 @@
 
 ## 大模型综述
 [通向AGI之路：大型语言模型（LLM）技术精要](https://zhuanlan.zhihu.com/p/597586623) 最好的综述，解释了LLM中attention和FFN参数蕴含知识的区别  
-[[PPT]浅析大语言模型从预训练到微调的技术原理](https://zhuanlan.zhihu.com/p/647843722)
+[[PPT]浅析大语言模型从预训练到微调的技术原理](https://zhuanlan.zhihu.com/p/647843722)  
 [人工智能对齐是什么、以及我为什么选择研究它？](https://zhuanlan.zhihu.com/p/655464730)
 
 
@@ -39,8 +39,10 @@ GELU/Swish/SwiGLU
 [LLM大模型之精度问题（FP16，FP32，BF16）详解与实践](https://zhuanlan.zhihu.com/p/657886517)  
 [LLM大模型之不同精度下显存占用与相互转换实践](https://zhuanlan.zhihu.com/p/658343628) fp16/fp32/bf16之间的相互转换，尾数位直接去掉，指数位-127+15  
 [浅谈后向传递的计算量大约是前向传递的两倍](https://zhuanlan.zhihu.com/p/675517271)  
-[LLM（二十）：漫谈 KV Cache 优化方法，深度理解 StreamingLLM](https://zhuanlan.zhihu.com/p/659770503)
+[LLM（二十）：漫谈 KV Cache 优化方法，深度理解 StreamingLLM](https://zhuanlan.zhihu.com/p/659770503)  
 [为什么大模型输入输出往往只有2K, 4K token?](https://www.zhihu.com/question/606514058)  
+[大模型推理优化技术-KV Cache
+](https://mp.weixin.qq.com/s/XRtU1cnn1GX2J3oCDHKOtA)对比有无kv cache的显存占用和计算量分析，huggingface cache代码  
 ### Normalization  
 Post-LN&Pre-LN  
 Layer Norm&RMS Norm  
@@ -55,14 +57,16 @@ Layer Norm&RMS Norm
 ## LLM 结构
 ### 常见模型
 Qwen1.5  
+[千问Qwen2 beta/1.5模型代码逐行分析(三)](https://zhuanlan.zhihu.com/p/695113479)--写的非常非常详细的代码解析  
 Mixtral  
-[Mixtral-8x7B 模型挖坑](https://zhuanlan.zhihu.com/p/674751021)  写的很好的大模型逆向工程，解释了每个组件的作用   
+[Mixtral-8x7B 模型挖坑](https://zhuanlan.zhihu.com/p/674751021)--写的很好的大模型逆向工程，解释了每个组件的作用   
 [混合专家模型 (MoE) 详解](https://huggingface.co/blog/zh/moe)  
 [Mixtral 8✖️7B=56B？错！一文带你看清Mixtral内部结构及参数计算](https://zhuanlan.zhihu.com/p/673527090)  
 [群魔乱舞：MoE大模型详解](https://www.zhihu.com/tardis/zm/art/677638939?source_id=1003)  
 [从开源LLM中学模型架构优化-Mistral 7B](https://zhuanlan.zhihu.com/p/658911982)  
 LLama  
 [Llama 2 详解](https://mp.weixin.qq.com/s?__biz=MzU2NzE2MjE2Nw==&mid=2247484226&idx=1&sn=b5b26468548f4dbb3e6d2bd52b2b7feb&chksm=fca0271acbd7ae0cd591a0314d00ece2b696017ad26709b14313b942ce4077cffc01612fcb10&scene=21#wechat_redirect)   
+[llama源代码逐行分析](https://zhuanlan.zhihu.com/p/679819602)--写的非常非常详细的代码解析  
 [大模型升级与设计之道：ChatGLM、LLAMA、Baichuan及LLM结构解析](https://zhuanlan.zhihu.com/p/651747035)  
 GLM  
 [预训练语言模型：GLM](https://zhuanlan.zhihu.com/p/641499380)
@@ -76,10 +80,12 @@ GLM
 ## 模型训练
 [LLaMA-Factory源码解读](https://www.cnblogs.com/lm970585581/p/18140564)  
 ### Pretrain
+参考数据工程  
 ### SFT
 ### RLHF  
 [强化学习小记——观其大略](https://zhuanlan.zhihu.com/p/646787054)  
 [ChatGPT 背后的“功臣”——RLHF 技术详解](https://mp.weixin.qq.com/s/TLQ3TdrB5gLb697AFmjEYQ)  
+[图解大模型RLHF系列：人人都能看懂的PPO原理与源码解读](https://mp.weixin.qq.com/s/-QIU94ww9ldVN8e7vMarpw)  过程描述的非常清晰，四个模型的作用讲明白，需要二刷  
 PPO  
 [【RLHF】怎样让 PPO 训练更稳定？早期人类征服 RLHF 的驯化经验](https://zhuanlan.zhihu.com/p/666455333)  
 DPO  
@@ -102,9 +108,11 @@ Prefix Tuning
 [图解大模型训练之：数据并行下篇( DeepSpeed ZeRO，零冗余优化)](https://zhuanlan.zhihu.com/p/618865052)
 [DeepSpeed配置文件Json参数解析](https://zhuanlan.zhihu.com/p/645627795)
 张量并行   
-[图解大模型训练之：张量模型并行(TP)，Megatron-LM](https://zhuanlan.zhihu.com/p/622212228)
+[图解大模型训练之：张量模型并行(TP)，Megatron-LM](https://zhuanlan.zhihu.com/p/622212228)  
+[深入理解 Megatron-LM（3）代码结构](https://zhuanlan.zhihu.com/p/650237820)讲的最好的megatron代码  
+
 ### Trainer
-[LLM大模型之Trainer以及训练参数](https://zhuanlan.zhihu.com/p/662619853)
+[LLM大模型之Trainer以及训练参数](https://zhuanlan.zhihu.com/p/662619853)  一共90+参数讲清楚  
 ### 评估指标
 [一文带你理解｜NLP评价指标 BLEU 和 ROUGE（无公式）](https://zhuanlan.zhihu.com/p/647310970)
 
@@ -127,7 +135,7 @@ Prefix Tuning
 [大模型推理框架概述](https://juejin.cn/post/7286676030965317668)  
 [LLM（十八）：LLM 的推理优化技术纵览](https://zhuanlan.zhihu.com/p/642412124)  
 生成和采样  
-[LLM大语言模型之Generate/Inference（生成/推理）中参数与解码策略原理及其代码实现](https://zhuanlan.zhihu.com/p/653926703)  
+[LLM大语言模型之Generate/Inference（生成/推理）中参数与解码策略原理及其代码实现](https://zhuanlan.zhihu.com/p/653926703)  长文好文生成参数等
 [LLM（大语言模型）解码时是怎么生成文本的？](https://www.likecs.com/show-308663700.html)  
 [【NLP学习】自然语言生成中的top-k, top-p, typical采样方法的实现](https://zhuanlan.zhihu.com/p/560847355)  
 [如何通俗的理解beam search？](https://zhuanlan.zhihu.com/p/82829880)    
@@ -136,16 +144,19 @@ vLLM
 [LLM推理4：vllm和HF推理结果不一致](https://zhuanlan.zhihu.com/p/658780653)  
 [LLM（十七）：从 FlashAttention 到 PagedAttention, 如何进一步优化 Attention 性能](https://zhuanlan.zhihu.com/p/638468472)  
 [FlashAttention:加速计算,节省显存, IO感知的精确注意力](https://zhuanlan.zhihu.com/p/639228219)
+[Attention优化｜2w字原理&图解: 从Online-Softmax到FlashAttention V1/V2/V3](https://mp.weixin.qq.com/s/v0l-sfJl8mSApSATh7BLRQ) 一文搞懂flash attention  
 
 
 
 
 
 ## 模型量化
-[大模型量化概述](https://blog.csdn.net/scgaliguodong123_/article/details/136176355)  
+[大模型量化概述](https://blog.csdn.net/scgaliguodong123_/article/details/136176355) 讲的比较泛，每种方法都没说清楚
 AWQ  
-[AWQ：用于 LLM 压缩和加速的激活感知权重量化](https://zhuanlan.zhihu.com/p/669061765)  
+[AWQ：用于 LLM 压缩和加速的激活感知权重量化](https://zhuanlan.zhihu.com/p/669061765) 原论文翻译  
+[深入理解AWQ量化技术](https://zhuanlan.zhihu.com/p/697761176?utm_psn=1775578241077538816) 显著权重和scaling系数
 GPTQ
+[使用 AutoGPTQ 和 transformers 让大语言模型更轻量化](https://huggingface.co/blog/zh/gptq-integration) huggingface官方文档-autogptq
 
 
 
@@ -156,3 +167,8 @@ GPTQ
 [大部分的大模型(LLM)采用左填充(left-padding)的原因](https://zhuanlan.zhihu.com/p/646852375)  
 数据工程  
 [研发大模型的血液--万字长文详谈数据工程](https://mp.weixin.qq.com/s/izePeavfxezfEkkPzgMmjQ)
+
+## 应用框架  
+[通过4个任务比较LangChain和LlamaIndex](https://developer.aliyun.com/article/1426023)
+### LangChain  
+### LlamaIndex
